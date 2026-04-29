@@ -1,0 +1,159 @@
+/* ============================================================
+   assets/css/dashboard.css — Dashboard-specific styles
+   ============================================================ */
+
+/* ── Page body background ──────────────────────────────── */
+body { background: var(--bg-light); }
+
+/* ── Pagination ────────────────────────────────────────── */
+.pagination-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1.2rem;
+  background: var(--bg-lighter);
+  border-top: 1px solid var(--border);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+.pagination-pages { display: flex; gap: 0.35rem; }
+.pagination-pages a,
+.pagination-pages span {
+  min-width: 30px; height: 30px;
+  display: grid; place-items: center;
+  border-radius: var(--radius-md);
+  font-size: 0.82rem;
+  color: var(--text-dark);
+  border: 1.5px solid var(--border);
+  transition: var(--transition-fast);
+  text-decoration: none;
+  font-weight: 500;
+}
+.pagination-pages a:hover { background: var(--bg-light); border-color: var(--border-dark); }
+.pagination-pages a.active,
+.pagination-pages span.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+/* ── Report cards ──────────────────────────────────────── */
+.report-stat-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+/* ── Order detail card (customer my_orders) ───────────── */
+.order-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: box-shadow var(--transition);
+}
+.order-card:hover { box-shadow: var(--shadow-md); }
+.order-card-header {
+  padding: 0.9rem 1.4rem;
+  background: var(--bg-light);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.order-card-id {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+.order-card-badges { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
+.order-card-body {
+  padding: 1.2rem 1.4rem;
+}
+.order-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem 1.5rem;
+  font-size: 0.865rem;
+  color: var(--text-muted);
+}
+.order-meta-item { display: flex; align-items: center; gap: 0.4rem; }
+.order-meta-item span:first-child { flex-shrink: 0; }
+.order-card-footer {
+  padding: 0.85rem 1.4rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  background: var(--bg-light);
+}
+.order-total {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+.order-date { font-size: 0.78rem; color: var(--text-subtle); }
+.order-note {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 0.6rem 0.9rem;
+  background: var(--accent-subtle);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--accent);
+  margin-top: 0.75rem;
+}
+
+/* ── Dashboard welcome banner ──────────────────────────── */
+.welcome-banner {
+  background: linear-gradient(135deg, var(--secondary) 0%, #1C1500 100%);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: var(--space-xl);
+  border: 1px solid rgba(200,155,60,0.2);
+  overflow: hidden;
+  position: relative;
+}
+.welcome-banner::before {
+  content: '';
+  position: absolute;
+  right: -60px; top: -60px;
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,155,60,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.welcome-banner .wb-text h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: #fff;
+  margin-bottom: 0.35rem;
+}
+.welcome-banner .wb-text p { font-size: 0.875rem; color: rgba(255,255,255,0.5); }
+.welcome-banner .wb-icon {
+  font-size: 3rem;
+  opacity: 0.25;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .report-stat-row { grid-template-columns: repeat(2, 1fr); }
+  .order-meta-grid { grid-template-columns: repeat(2, 1fr); }
+  .welcome-banner { padding: 1.25rem; }
+  .welcome-banner .wb-icon { display: none; }
+}
+@media (max-width: 480px) {
+  .report-stat-row { grid-template-columns: 1fr; }
+  .order-meta-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,189 @@
+/* ============================================================
+   assets/css/auth.css — Login & Signup Pages
+   ============================================================ */
+
+body { background: #fff; }
+
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* ── Left visual panel ─────────────────────────────────── */
+.auth-visual {
+  position: relative;
+  background-color: var(--secondary);
+  background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2.5rem;
+  overflow: hidden;
+}
+.auth-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.88) 0%,
+    rgba(0,0,0,0.45) 50%,
+    rgba(0,0,0,0.15) 100%
+  );
+}
+.auth-visual-logo {
+  position: absolute;
+  top: 2rem; left: 2.5rem;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--accent);
+  font-weight: 700;
+  z-index: 1;
+  text-decoration: none;
+  line-height: 1;
+}
+.auth-visual-logo span { color: rgba(255,255,255,0.85); }
+
+.auth-visual-content {
+  position: relative;
+  z-index: 1;
+}
+.auth-visual-content h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+.auth-visual-content h2 em {
+  font-style: italic;
+  color: var(--accent);
+}
+.auth-visual-content p {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.92rem;
+  line-height: 1.75;
+  max-width: 380px;
+}
+
+/* Trust badges on auth visual */
+.auth-trust {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+.auth-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.5);
+}
+.auth-trust-item i { color: var(--accent); font-size: 0.82rem; }
+
+/* ── Right form panel ──────────────────────────────────── */
+.auth-form-panel {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 4rem;
+  overflow-y: auto;
+}
+
+.auth-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  transition: color var(--transition-fast);
+}
+.auth-back-link:hover { color: var(--primary); }
+
+.auth-heading-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--primary);
+  display: block;
+  margin-bottom: 0.45rem;
+}
+.auth-heading-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+  line-height: 1.1;
+  color: var(--text-dark);
+}
+.auth-heading-sub {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.auth-form { margin-top: 0.5rem; }
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  color: var(--text-subtle);
+  font-size: 0.78rem;
+}
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.auth-footer-link {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-top: 1.75rem;
+}
+.auth-footer-link a {
+  color: var(--primary);
+  font-weight: 600;
+}
+.auth-footer-link a:hover { text-decoration: underline; }
+
+/* Demo credentials hint */
+.auth-demo-hint {
+  margin-top: 1.75rem;
+  padding: 0.9rem 1rem;
+  background: var(--accent-subtle);
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  border: 1px solid var(--accent-light);
+  line-height: 1.7;
+}
+.auth-demo-hint strong { color: var(--text-dark); }
+
+/* ── Responsive ────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .auth-page { grid-template-columns: 1fr; }
+  .auth-visual { display: none; }
+  .auth-form-panel {
+    padding: 3rem 1.75rem;
+    justify-content: flex-start;
+    padding-top: 4rem;
+  }
+}
+@media (max-width: 480px) {
+  .auth-form-panel { padding: 2rem 1.25rem; }
+  .auth-heading-title { font-size: 1.7rem; }
+}

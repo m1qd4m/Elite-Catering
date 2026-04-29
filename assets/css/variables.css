@@ -1,0 +1,78 @@
+/* ============================================================
+   assets/css/variables.css — Design Tokens
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Brand Colors */
+  --primary:        #C89B3C;
+  --primary-dark:   #A67C28;
+  --primary-light:  #D4AA55;
+  --secondary:      #111111;
+  --accent:         #E5C07B;
+  --accent-light:   #F5E4B8;
+  --accent-subtle:  #FBF3E2;
+
+  /* Backgrounds */
+  --bg-light:       #F9F8F5;
+  --bg-lighter:     #FFFFFF;
+  --bg-dark:        #0F0F0F;
+  --bg-dark-2:      #1A1A1A;
+  --bg-card:        #FFFFFF;
+
+  /* Text */
+  --text-dark:      #1A1A1A;
+  --text-medium:    #3D3D3D;
+  --text-muted:     #6B6B6B;
+  --text-subtle:    #9CA3AF;
+  --text-light:     #FAFAFA;
+
+  /* Borders */
+  --border:         #E8E3D8;
+  --border-dark:    #D1C9B8;
+  --border-focus:   rgba(200,155,60,0.5);
+
+  /* Status */
+  --danger:         #C0392B;
+  --danger-light:   #FEE2E2;
+  --success:        #27AE60;
+  --success-light:  #D1FAE5;
+  --warning:        #F39C12;
+  --warning-light:  #FEF3C7;
+  --info:           #2980B9;
+  --info-light:     #DBEAFE;
+
+  /* Typography */
+  --font-display:   'Cormorant Garamond', Georgia, serif;
+  --font-body:      'DM Sans', 'Helvetica Neue', sans-serif;
+
+  /* Spacing */
+  --space-xs:  0.25rem;
+  --space-sm:  0.5rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 5rem;
+
+  /* Radii */
+  --radius-sm:   5px;
+  --radius-md:   8px;
+  --radius-lg:   14px;
+  --radius-xl:   20px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-sm:   0 1px 4px rgba(0,0,0,0.07), 0 2px 8px rgba(0,0,0,0.05);
+  --shadow-md:   0 4px 12px rgba(0,0,0,0.09), 0 2px 4px rgba(0,0,0,0.06);
+  --shadow-lg:   0 10px 30px rgba(0,0,0,0.12), 0 4px 8px rgba(0,0,0,0.08);
+  --shadow-gold: 0 6px 24px rgba(200,155,60,0.28);
+
+  /* Transitions */
+  --transition-fast: 0.15s cubic-bezier(0.4,0,0.2,1);
+  --transition:      0.28s cubic-bezier(0.4,0,0.2,1);
+
+  /* Layout */
+  --sidebar-width:   256px;
+  --header-height:   64px;
+}
