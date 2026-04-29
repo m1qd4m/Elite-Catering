@@ -1,6 +1,3 @@
-Here’s a clean, professional **GitHub README description** for your project (simple + impressive 👇):
-
----
 
 ## 🍽️ Catering Management System
 
@@ -8,37 +5,37 @@ A complete **web-based Catering Management System** built using **PHP, MySQL, HT
 
 ---
 
- Features
+## 🚀 Features
 
-Admin Panel
+### 👨‍💼 Admin Panel
 
- Manage users (customers & staff)
- View and control bookings/orders
- Manage menu and catering packages
- Generate reports
- Dashboard overview
+* Manage users (customers & staff)
+* View and control bookings/orders
+* Manage menu and catering packages
+* Generate reports
+* Dashboard overview
 
-Staff Panel
+### 👨‍🍳 Staff Panel
 
- View assigned orders
- Update order status
- Manage daily tasks
+* View assigned orders
+* Update order status
+* Manage daily tasks
 
- Customer Panel
+### 👤 Customer Panel
 
- User authentication (Login/Signup)
- Browse menu & packages
- Book catering services
- View order history
+* User authentication (Login/Signup)
+* Browse menu & packages
+* Book catering services
+* View order history
 
+---
 
+## 🛠️ Tech Stack
 
- Tech Stack
-
-Frontend HTML, CSS, JavaScript
-Backend: PHP
-Database: MySQL
-Server: XAMPP / Apache
+* **Frontend:** HTML, CSS, JavaScript
+* **Backend:** PHP
+* **Database:** MySQL
+* **Server:** XAMPP / Apache
 
 ---
 
@@ -92,14 +89,4 @@ http://localhost/catering-system
 
 * Secure login & signup system
 * Role-based access (Admin / Staff / Customer)
-
----
-
-## 📸 Future Improvements
-
-* Online payment integration
-* Email notifications
-* Responsive mobile design
-* Advanced analytics dashboard
-
 
